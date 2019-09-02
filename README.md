@@ -16,6 +16,7 @@ Then create a `github_token` secret per repository using the drone web ui.
 kind: pipeline
 name: example
 
+steps:
   - name: semantic-release
     image: devpies/github-release-drone:1.0.0
     environment:
