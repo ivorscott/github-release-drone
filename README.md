@@ -17,7 +17,7 @@ kind: pipeline
 name: example
 
   - name: semantic-release
-    image: devpies/semantic-release-github-drone:1.0.0
+    image: devpies/github-release-drone:1.0.0
     environment:
       GITHUB_TOKEN:
         from_secret: github_token
