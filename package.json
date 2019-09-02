@@ -1,0 +1,10 @@
+{
+  "name": "github-release-drone",
+  "version": "1.0.0",
+  "license": "MIT",
+  "dependencies": {
+    "@semantic-release/changelog": "3.0.4",
+    "@semantic-release/git": "7.0.16",
+    "semantic-release": "15.13.24"
+  }
+}

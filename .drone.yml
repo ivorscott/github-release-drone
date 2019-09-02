@@ -1,0 +1,29 @@
+kind: pipeline
+name: Github Release Drone
+
+steps:
+  - name: Build & Publish
+    image: docker:dind
+    environment:
+      DOCKER_USER:
+        from_secret: registry_user
+      DOCKER_PASS:
+        from_secret: registry_pass
+    volumes:
+      - name: dockersock
+        path: /var/run/docker.sock
+    commands:
+      - docker login -u $DOCKER_USER  -p $DOCKER_PASS
+      - docker build --tag devpies/github-release-drone:1.0.0 .
+      - docker push devpies/github-release-drone:1.0.0
+
+volumes:
+  - name: dockersock
+    host:
+      path: /var/run/docker.sock
+
+trigger:
+  branch:
+    - master
+  event:
+    - push
