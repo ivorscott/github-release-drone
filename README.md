@@ -1,7 +1,5 @@
 # github-release-drone
 
-[![Build Status](https://drone.devpie.io/api/badges/devpies/github-release-drone/status.svg)](https://drone.devpie.io/devpies/github-release-drone)
-
 Drone plugin for making semantic releases based on https://github.com/semantic-release/semantic-release.
 
 ## Usage
